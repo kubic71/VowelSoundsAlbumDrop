@@ -49,7 +49,10 @@ const contractAddress = '0xa812137EFf2B368d0B2880A39B609fB60c426850';
 // Web3Modal Things
 /////////////
 
-const {publicClient} = configureChains(chains, [alchemyProvider({ apiKey: 'fEzVwWJ9CcYxbNyyUvEF5Lp9g94nYXM8' })])
+// const {publicClient} = configureChains(chains, [alchemyProvider({ apiKey: 'fEzVwWJ9CcYxbNyyUvEF5Lp9g94nYXM8' })])
+const {publicClient} = configureChains(chains, [
+    infuraProvider({apiKey: '2096b0699ab146b1a019961a2a9f9127'})
+])
 
 const wagmiConfig = createConfig({
     autoConnect: true,
